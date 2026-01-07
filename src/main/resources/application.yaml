@@ -1,0 +1,20 @@
+server:
+  port: 8081
+
+spring:
+  datasource:
+    driver-class-name: oracle.jdbc.OracleDriver
+    # Oracle Database 11g Express Edition 사용중이라 기본 주소
+    url: jdbc:oracle:thin:@localhost:1521:xe
+    # 내가 만든 계정 정보
+    username: Bitcos
+    password: "1234"
+
+  jpa:
+    hibernate:
+      ddl-auto: update # 테이블은 이미 만들었으니 유지하거나 변경사항만 반영
+    show-sql: true # 콘솔에 실행되는 SQL을 출력 (디버깅용)
+    properties:
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.OracleDialect
