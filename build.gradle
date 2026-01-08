@@ -42,3 +42,22 @@ dependencies {
 tasks.named('test') {
 	useJUnitPlatform()
 }
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
+
+tasks.withType(JavaExec) {
+    jvmArgs("-Dfile.encoding=UTF-8")
+}
+
+// bootRun 실행 시 한글 깨짐 방지
+bootRun {
+    systemProperty "file.encoding", "UTF-8"
+}
+
+// 테스트 시 한글 깨짐 방지
+test {
+    useJUnitPlatform()
+    systemProperty "file.encoding", "UTF-8"
+}
