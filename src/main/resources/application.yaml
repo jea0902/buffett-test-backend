@@ -7,14 +7,24 @@ spring:
     # Oracle Database 11g Express Edition 사용중이라 기본 주소
     url: jdbc:oracle:thin:@localhost:1521:xe
     # 내가 만든 계정 정보
-    username: Bitcos
-    password: "1234"
+    username: BITCOS
+    password: 1234
 
-  jpa:
+jpa:
+  database: oracle
+  database-platform: org.hibernate.dialect.OracleDialect
+  hibernate:
+    ddl-auto: update
+  show-sql: true
+  properties:
     hibernate:
-      ddl-auto: update # 테이블은 이미 만들었으니 유지하거나 변경사항만 반영
-    show-sql: true # 콘솔에 실행되는 SQL을 출력 (디버깅용)
-    properties:
-      hibernate:
-        format_sql: true
-        dialect: org.hibernate.dialect.OracleDialect
+      format_sql: true
+
+  # jpa:
+  #   hibernate:
+  #     ddl-auto: update # update는 테이블은 이미 만들었으니 유지하거나 변경사항만 반영
+  #   show-sql: true # 콘솔에 실행되는 SQL을 출력 (디버깅용)
+  #   properties:
+  #     hibernate:
+  #       format_sql: true
+  #       dialect: org.hibernate.dialect.Oracle10Dialect
