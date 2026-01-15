@@ -42,6 +42,11 @@ public class FinancialAnnual {
     private Long totalEquity; // 총 자본
     private Long totalLiabilities; // 총 부채
 
+    // 이자보상배율과 현금창출력 계산을 위해 추가
+    private Long ebit; // 영업이익(세전이자전)
+    private Long interestExpense; // 이자비용
+    private Long freeCashFlow; // 잉여현금흐름
+
     @Column(precision = 10, scale = 2)
     private BigDecimal eps; // 주당순이익
 }

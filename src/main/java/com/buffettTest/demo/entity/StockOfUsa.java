@@ -38,7 +38,7 @@ public class StockOfUsa {
     @Column(columnDefinition = "CHAR(1)")
     private String isQualified = "N"; // 'Y' or 'N' (필터용)
 
-    private String priceStatus; // "STRONG_BUY(황금색)" or "OVERVALUED(빨간색)"
+    private String priceStatus; // "ROWVALUED(황금색)" or "OVERVALUED(빨간색)"
 
     @Column(precision = 20, scale = 4)
     private BigDecimal targetPrice; // 목표가 (사용자에게 텍스트로 보여줄 값)

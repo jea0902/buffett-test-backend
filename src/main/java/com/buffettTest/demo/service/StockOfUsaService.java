@@ -6,11 +6,9 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.math.BigDecimal;
 import java.util.List;
-import java.util.Optional;
 
-// 기본 CRUD용이라 ScoringService와는 존재 의의가 다름
+// 미국 전 종목들 최소 필터링(일단 버핏 기준 우량주)해서 노출될 수 있게 하는 로직
 
 @Service
 @RequiredArgsConstructor
