@@ -7,6 +7,9 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
+// 초기 데이터 셋업용
+// 실제 서비스가 운영될 떄는 모든 비즈니스 로직이 service 레이어에 있어야 함
+
 @SpringBootApplication
 public class BitcosApplication { // 클래스명이 BticosApplication이면 그대로 두세요!
 
