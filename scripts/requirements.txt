@@ -3,6 +3,8 @@
 
 # 금융 데이터 수집
 yfinance>=0.2.32
+edgartools>=2.0.0
+curl_cffi>=0.5.0
 
 # Oracle DB 연결
 cx_Oracle>=8.3.0
